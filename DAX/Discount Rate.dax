@@ -1,0 +1,6 @@
+Discount Rate % = 
+DIVIDE(
+    SUM(sales_cleanvw_sales_clean[TotalDiscount_USD]), 
+    SUM(sales_cleanvw_sales_clean[GrossRevenue_USD]), 
+    0
+)

@@ -1,0 +1,6 @@
+Margin % = 
+DIVIDE(
+    SUM(sales_cleanvw_sales_clean[GrossProfit_USD]), 
+    SUM(sales_cleanvw_sales_clean[Revenue_USD]), 
+    0
+)

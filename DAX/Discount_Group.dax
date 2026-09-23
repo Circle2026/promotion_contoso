@@ -1,0 +1,9 @@
+Discount_Group = 
+SWITCH(
+    TRUE(),
+    ISBLANK(sales_cleanvw_sales_clean[DiscountRate]) || sales_cleanvw_sales_clean[DiscountRate] = 0, "01 無折扣 (0%)",
+    sales_cleanvw_sales_clean[DiscountRate] <= 0.05, "02 輕度折扣 (1%-5%)",
+    sales_cleanvw_sales_clean[DiscountRate] <= 0.10, "03 中度折扣 (6%-10%)",
+    sales_cleanvw_sales_clean[DiscountRate] <= 0.20, "04 重度折扣 (11%-20%)",
+    "05 打到骨折 (>20%)"
+)

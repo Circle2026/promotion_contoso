@@ -1,0 +1,4 @@
+WeightedMargin% = DIVIDE(
+    SUMX(sales_cleanvw_sales_clean, sales_cleanvw_sales_clean[Quantity]* (sales_cleanvw_sales_clean[UnitPrice_USD] - sales_cleanvw_sales_clean[UnitCost])),
+    SUMX(sales_cleanvw_sales_clean, sales_cleanvw_sales_clean[Quantity] * sales_cleanvw_sales_clean[UnitPrice_USD])
+)
